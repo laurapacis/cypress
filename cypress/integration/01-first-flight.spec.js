@@ -21,7 +21,8 @@ describe('Create a New Item', () => {
     })
 
     it('should put stuff in an input field', () => {
-       cy.get('[data-test="new-item-input"]').type('good attitude')
+        cy.get('[data-test="new-item-input"]').type('good attitude');
+        cy.get('[data-test="add-item"]').click()
    })
 });
 
