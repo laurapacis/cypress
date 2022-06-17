@@ -9,9 +9,15 @@
 
 describe('Create a New Item', () => {
     beforeEach(() => { // beforeEach runs before EACH test (oc xD)
-        cy.visit('/jetsetter')
-    });
+        cy.visit('/jetsetter') // tells where to look
+    })
 
-    it('should', () => {})
+    it('should have a form', () => {
+        cy.get('form').should('exist');
+    })
+
+    it('should have the words "Add Item"', () => {
+        cy.contains('Add Item') // looks for this exact text throughout the page
+    })
 });
 
