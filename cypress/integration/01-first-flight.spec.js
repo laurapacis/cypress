@@ -19,5 +19,9 @@ describe('Create a New Item', () => {
     it('should have the words "Add Item"', () => {
         cy.contains('Add Item') // looks for this exact text throughout the page
     })
+
+    it('should put stuff in an input field', () => {
+       cy.get('[data-test="new-item-input"]').type('good attitude')
+   })
 });
 
